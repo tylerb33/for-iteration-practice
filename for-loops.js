@@ -25,15 +25,18 @@ for (let i = 4096; i <= 1; i /= 2) {
 
 // President #3 was Thomas Jefferson
 
-let presidentsOrder = ["1", "2", "3"]
-let presidents = ["George Washington", "John Adams", "Thomas Jefferson"]
+let presidents = []
+presidents.push({name: "George Washington", order: 1});
+presidents.push({name: "Barack Obama", order: 2});
+presidents.push({name: "Bill Clinton", order: 3});
+presidents.push({name: "Donald Trump", order: 4});
 
 
 for (let i = 0; i < presidents.length; i++) {
 	let sentence = ""
-	let currentPres = presidents[i];
-  let currentOrder = presidentsOrder[i];
-	sentence = "President #" + presidentsOrder[i] + " was " + currentPres;
+	let currentPres = presidents[i].name;
+  let currentOrder = presidents[i].order;
+	sentence = "President #" + currentOrder + " was " + currentPres;
  	console.log (sentence);
 }
 
